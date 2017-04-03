@@ -1,1 +1,1 @@
-# QtFFmpeg
+# 记录对FFmpeg的学习成果
