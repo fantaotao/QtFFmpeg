@@ -40,7 +40,6 @@ void Widget::slotShowVideo(QImage img)
     {
         return;
     }
-    mImage = img;
     ui->videoshow_label->setPixmap(QPixmap::fromImage(img));
 }
 

@@ -31,7 +31,6 @@ private:
     QThread *m_videoDecThread;
     VideoDec *m_videoDec;
     QString m_fileName;
-    QImage mImage;
 };
 
 #endif // WIDGET_H

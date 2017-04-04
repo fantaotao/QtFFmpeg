@@ -21,22 +21,26 @@ class VideoDec : public QObject
 public:
     explicit VideoDec(QObject *parent = 0);
     ~VideoDec();
-    int videoindex;
-    AVFormatContext *pFormatCtx;
-    AVCodecContext *pCodecCtx;
-    AVCodec *pCodec;
-    AVPacket *packet;
-    AVFrame *pFrame;
-    AVFrame *pFrameRGB;
-    QString fileName;
 
 signals:
     void SendImage(QImage img);
 
 public slots:
     void slotInit();
-    void play();
     void slotSetFileName(QString name);
+
+private slots:
+    void play();
+
+private:
+    int videoindex;
+    AVFormatContext *m_FormatCtx;
+    AVCodecContext *m_CodecCtx;
+    AVCodec *m_Codec;
+    AVPacket *m_packet;
+    AVFrame *m_frame;
+    AVFrame *m_frameRGB;
+    QString m_fileName;
 
 };
 
